@@ -1,5 +1,6 @@
 import { expect } from 'chai';
-import { sum } from '../src/index.js';
+import { sum } from '../src/index';
+
 const { describe, it } = global;
 
 describe('sum', () => {
