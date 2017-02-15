@@ -1,6 +1,6 @@
 import chai, { expect } from 'chai'
 import dirtyChai from 'dirty-chai'
-import { isToggleEnabled, setFeatureConfig, FeatureToggle, RouterFeatureToggle } from '../src/index'
+import { isToggleEnabled, setFeatureConfig, FeatureToggle } from '../src/index'
 
 chai.use(dirtyChai)
 
@@ -17,9 +17,5 @@ describe('exports are defined', () => {
 
   it('FeatureToggle should be defined', () => {
     expect(FeatureToggle).to.not.be.undefined()
-  })
-
-  it('RouterFeatureToggle should be defined', () => {
-    expect(RouterFeatureToggle).to.not.be.undefined()
   })
 })
