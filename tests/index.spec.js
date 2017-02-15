@@ -1,16 +1,25 @@
-import { expect } from 'chai'
-import { sum } from '../src/index'
+import chai, { expect } from 'chai'
+import dirtyChai from 'dirty-chai'
+import { isToggleEnabled, setFeatureConfig, FeatureToggle, RouterFeatureToggle } from '../src/index'
+
+chai.use(dirtyChai)
 
 const { describe, it } = global
 
-describe('sum', () => {
-  it('should add two numbers correctly', () => {
-    const result = sum(10, 20)
-    expect(result).to.be.equal(30)
+describe('exports are defined', () => {
+  it('isToggleEnabled should be defined', () => {
+    expect(isToggleEnabled).to.not.be.undefined()
   })
 
-  it('should return the same number if second param is null', () => {
-    const result = sum(10, null)
-    expect(result).to.be.equal(10)
+  it('setFeatureConfig should be defined', () => {
+    expect(setFeatureConfig).to.not.be.undefined()
+  })
+
+  it('FeatureToggle should be defined', () => {
+    expect(FeatureToggle).to.not.be.undefined()
+  })
+
+  it('RouterFeatureToggle should be defined', () => {
+    expect(RouterFeatureToggle).to.not.be.undefined()
   })
 })
