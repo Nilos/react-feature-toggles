@@ -19,6 +19,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "babel src -d dist",
+    "watch": "babel --watch src -d dist",
     "lint": "eslint src tests",
     "lint:fix": "npm run lint -- --fix",
     "test": "mocha tests --compilers js:babel-register",
