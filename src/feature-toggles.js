@@ -8,6 +8,10 @@ export const isToggleEnabled = (toggleName) => {
   return false
 }
 
-export const setFeatureConfig = (config) => {
+export const setFeatureConfig = (config = {}) => {
+  if (typeof config !== 'object') {
+    throw new Error('Feature config has to be an object')
+  }
+
   featureConfig = config
 }
