@@ -22,7 +22,7 @@
     "watch": "babel --watch src -d dist",
     "lint": "eslint src tests",
     "lint:fix": "npm run lint -- --fix",
-    "test": "mocha tests/*.spec.js --compilers js:babel-register",
+    "test": "mocha tests/*.spec.js tests/**/*.spec.js --compilers js:babel-register",
     "test:watch": "npm run test -- --watch",
     "prepublish": "npm run clean & npm run build"
   },
@@ -36,13 +36,17 @@
     "babel-preset-stage-3": "^6.22.0",
     "chai": "^3.5.0",
     "dirty-chai": "^1.2.2",
+    "enzyme": "^2.7.1",
     "eslint": "^3.15.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
+    "jsdom": "^9.11.0",
     "mocha": "^2.4.5",
     "react": "15.x",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "15.x",
     "react-router": "2.x",
     "rimraf": "^2.5.2"
   },
@@ -51,6 +55,7 @@
   },
   "peerDependencies": {
     "react": "15.x",
+    "react-dom": "15.x",
     "react-router": "2.x"
   }
 }
