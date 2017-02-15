@@ -13,6 +13,6 @@ export default class FeatureToggle extends Component {
 }
 
 FeatureToggle.propTypes = {
-  name: React.propTypes.string.isRequired,
+  name: React.PropTypes.string.isRequired,
   children: React.PropTypes.node.isRequired,
 }

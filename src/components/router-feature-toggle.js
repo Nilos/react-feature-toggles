@@ -1,5 +1,5 @@
 import { createRoutes } from 'react-router'
-import { FeatureToggle } from './feature-toggle'
+import FeatureToggle from './feature-toggle'
 
 import { isToggleEnabled } from '../feature-toggles'
 
@@ -24,12 +24,12 @@ function createRouteFromReactElement(element) {
   return route
 }
 
-export default class RouterFeatureToggle extends FeatureToggle {}
-
-RouterFeatureToggle.createRouteFromReactElement = (element) => {
+FeatureToggle.createRouteFromReactElement = (element) => {
   if (isToggleEnabled(element.props.name)) {
     return createRouteFromReactElement(element)
   }
 
   return null
 }
+
+export default FeatureToggle

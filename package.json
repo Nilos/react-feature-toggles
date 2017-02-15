@@ -22,7 +22,7 @@
     "watch": "babel --watch src -d dist",
     "lint": "eslint src tests",
     "lint:fix": "npm run lint -- --fix",
-    "test": "mocha tests --compilers js:babel-register",
+    "test": "mocha tests/*.spec.js --compilers js:babel-register",
     "test:watch": "npm run test -- --watch",
     "prepublish": "npm run clean & npm run build"
   },
