@@ -47,7 +47,7 @@
     "react": "15.x",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "15.x",
-    "react-router": "2.x",
+    "react-router": "3.x",
     "rimraf": "^2.5.2"
   },
   "dependencies": {
