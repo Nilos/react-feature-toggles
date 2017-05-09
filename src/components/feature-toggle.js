@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
+import PropTypes from 'prop-types'
 import { createRoutes } from 'react-router'
 
 import { isToggleEnabled } from '../feature-toggles'
@@ -14,8 +15,8 @@ export default class FeatureToggle extends Component {
 }
 
 FeatureToggle.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node.isRequired,
+  name: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 function createRoute(defaultProps, props) {
